@@ -1,0 +1,41 @@
+﻿<html>
+
+<head>
+    <title>Angular 2 QuickStart</title>
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <base href="/">
+
+    <link rel="stylesheet" href="content/styles.css">
+
+    <script src="scripts/angular2-polyfills.js"></script>
+    <script src="scripts/es6-shim.min.js"></script>
+    <script src="scripts/system.js"></script>
+    <script src="scripts/Rx.js"></script>
+    <script src="scripts/angular2.dev.js"></script>
+    <script src="scripts/router.dev.js"></script>
+    <script src="scripts/http.dev.js"></script>
+
+    <script>
+        System.config({
+            packages: {
+                app: {
+                    format: 'cjs',
+                    defaultExtension: 'js'
+                }
+            }
+        });
+        System.import('app/boot')
+            .then(null, console.error.bind(console));
+    </script>
+</head>
+
+<body>
+    <app>Loading...</app>
+</body>
+
+</html>
